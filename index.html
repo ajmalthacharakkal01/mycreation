@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+    :root {
+        --federal-blue: #03045eff;
+        --marian-blue: #023e8aff;
+        --honolulu-blue: #0077b6ff;
+        --blue-green: #0096c7ff;
+        --pacific-cyan: #00b4d8ff;
+        --vivid-sky-blue: #48cae4ff;
+        --non-photo-blue: #90e0efff;
+        --non-photo-blue-2: #ade8f4ff;
+        --light-cyan: #caf0f8ff;
+    }
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: linear-gradient(135deg, var(--light-cyan) 0%, var(--vivid-sky-blue) 100%);
+        color: var(--federal-blue);
+        min-height: 100vh;
+    }
+    header {
+        background: linear-gradient(90deg, var(--marian-blue) 0%, var(--blue-green) 100%);
+        color: var(--light-cyan);
+        text-align: center;
+        padding: 2rem 1rem;
+        box-shadow: 0 4px 16px var(--marian-blue)22;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        color: var(--vivid-sky-blue);
+        text-shadow: 1px 2px 8px var(--federal-blue)33;
+    }
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: var(--non-photo-blue-2);
+    }
+    nav {
+        text-align: center;
+        background: linear-gradient(90deg, var(--blue-green) 0%, var(--pacific-cyan) 100%);
+        padding: 12px 0;
+        box-shadow: 0 2px 8px var(--blue-green)18;
+    }
+    nav a {
+        color: var(--light-cyan);
+        text-decoration: none;
+        margin: 0 18px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.2s, text-shadow 0.2s;
+    }
+    nav a:hover {
+        color: var(--vivid-sky-blue);
+        text-shadow: 0 2px 8px var(--pacific-cyan)44;
+    }
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 24px 24px 32px 24px;
+        background: var(--light-cyan)dd;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px var(--blue-green)18, 0 1.5px 6px var(--marian-blue)14;
+    }
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .about img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid var(--blue-green);
+        box-shadow: 0 4px 24px var(--marian-blue)55;
+        background: var(--light-cyan);
+    }
+    .about-text {
+        max-width: 500px;
+        margin-top: 20px;
+    }
+    .about-text h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: var(--blue-green);
+        letter-spacing: 1px;
+    }
+    .about-text p {
+        color: var(--federal-blue);
+        font-size: 1.1rem;
+    }
+    section h2 {
+        color: var(--marian-blue);
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+    section h3 {
+        color: var(--honolulu-blue);
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, var(--marian-blue) 0%, var(--blue-green) 100%);
+        color: var(--light-cyan);
+        margin-top: 30px;
+        box-shadow: 0 -2px 12px var(--marian-blue)22;
+    }
+    .moving-headline {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid var(--vivid-sky-blue);
+        animation: typing 3.5s steps(22, end), blink-caret 0.75s step-end infinite;
+        max-width: 100%;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: var(--vivid-sky-blue); }
+    }
+    .projects-flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+    .project-profile-img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid var(--blue-green);
+        box-shadow: 0 4px 24px var(--marian-blue)55;
+        background: var(--light-cyan);
+        margin-bottom: 18px;
+    }
+    @media (max-width: 700px) {
+        .projects-flex {
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-profile-img {
+            margin-bottom: 12px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=1200&h=300&facepad=3" alt="Banner" style="width:100%;max-height:220px;object-fit:cover;border-radius:16px 16px 0 0;margin-bottom:18px;box-shadow:0 2px 12px #33333322;">
+        <h1 class="moving-headline">MUHAMMED AJMAL T</h1>
+        <p>Electronics Trainer | Robotics Intern | Creator</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </nav>
+    <section id="home">
+        <h2>Learn. Build. Innovate</h2>
+        <p>Hello! I’m a Robotics Intern and Electronics Project Trainer with a passion for teaching and innovation. I work with students from 4th to 10th grade, guiding them in building exciting electronics projects using simple components like ICs, transistors, resistors, sensors, and more.
+
+My mission is to make electronics fun and approachable, helping young learners understand core concepts through hands-on projects. From basic circuits to creative DIY builds, I believe in learning by doing, sparking curiosity, and developing problem-solving skills that last a lifetime.
+
+.</p>
+    </section>
+    <section id="about">
+        <div class="about">
+            <img src="profile.jpg" alt="Profile Photo">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm MUHAMMED AJMAL T,Robotics Intern and Electronics Project Trainer with a passion for teaching and innovation. I work with students from 4th to 10th grade, guiding them in building exciting electronics projects using simple components like ICs, transistors, resistors, sensors, and more.
+                </p>
+                <div style="display:flex;gap:18px;margin-top:18px;flex-wrap:wrap;">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Electronics Lab" style="width:120px;height:90px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px #0077b633;">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Circuit Board" style="width:120px;height:90px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px #0077b633;">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Soldering" style="width:120px;height:90px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px #0077b633;">
+                </div>
+                <div style="display:flex;gap:18px;margin-top:18px;">
+                    <div style="text-align:center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2721/2721296.png" alt="Electronics" style="width:48px;height:48px;">
+                        <div style="font-size:0.95rem;color:#5b86e5;">Electronics</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2910/2910791.png" alt="Robotics" style="width:48px;height:48px;">
+                        <div style="font-size:0.95rem;color:#ff512f;">Robotics</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Teaching" style="width:48px;height:48px;">
+                        <div style="font-size:0.95rem;color:#36d1c4;">Teaching</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="projects-flex">
+            <img src="profile.jpg" alt="My Photo" class="project-profile-img">
+            <div style="flex:1;">
+                <h2>Projects</h2>
+                <div style="margin-bottom: 28px;">
+                    <h3 style="color:#5b86e5;margin-bottom:4px;">Main Project</h3>
+                    <strong>Role:</strong> Mechanical support - Rail Robot For Track Inspection <span style="color:#888;font-size:0.98em;">(Jan 2023 - June 2023)</span>
+                    <p style="margin:8px 0 0 0;">Rail robot for inspection of railway tracks using convolutional neural network algorithm. Major role in attachment of parts together.</p>
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Rail Robot" style="width:180px;height:120px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px #023e8a33;margin-top:10px;">
+                </div>
+                <div>
+                    <h3 style="color:#ff512f;margin-bottom:4px;">Mini Project</h3>
+                    <strong>Role:</strong> Mechanical support - Automatic Sun Tracking System with Auto cleaner <span style="color:#888;font-size:0.98em;">(May 2022 - Nov 2022)</span>
+                    <p style="margin:8px 0 0 0;">The sun tracking system for high yielded power by proper aligning and cleaning of solar panels. Major role in creation of small mechanical parts and attaching of parts.</p>
+                    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=400&q=80" alt="Solar Project" style="width:180px;height:120px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px #023e8a33;margin-top:10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Muhammed Ajmal T. All rights reserved.</p>
+    </footer>
+</body>
+</html>
